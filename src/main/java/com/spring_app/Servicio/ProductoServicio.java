@@ -80,4 +80,8 @@ public class ProductoServicio {
         }
         return rutaPdf;
     }
+
+    public List<Producto> listarProductosPorIds(List<Long> ids) {
+        return productoRepositorio.findAllById(ids);
+    }
 }

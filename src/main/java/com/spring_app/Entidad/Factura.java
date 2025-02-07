@@ -3,6 +3,8 @@ package com.spring_app.Entidad;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Entity
 @Data
 public class Factura {
@@ -19,7 +21,14 @@ public class Factura {
     @JoinColumn(name = "id_cliente")
     private Cliente cliente;
 
-    @ManyToOne
-    @JoinColumn(name = "id_producto")
-    private Producto productos;
+
+    // Este campo lo AGREGAS con las anotaciones
+    @ManyToMany
+    @JoinTable(
+            name = "factura_producto",
+            joinColumns = @JoinColumn(name = "factura_id"),
+            inverseJoinColumns = @JoinColumn(name = "producto_id")
+    )
+    private List<Producto> productos;
+
 }

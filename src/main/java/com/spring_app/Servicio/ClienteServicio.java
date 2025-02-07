@@ -1,22 +1,13 @@
 
 package com.spring_app.Servicio;
 
-import com.itextpdf.text.*;
-import com.itextpdf.text.pdf.PdfPCell;
-import com.itextpdf.text.pdf.PdfPTable;
-import com.itextpdf.text.pdf.PdfWriter;
 import com.spring_app.Entidad.Cliente;
-import com.spring_app.Entidad.Producto;
+
 import com.spring_app.Repositorio.ClienteRepositorio;
-import com.spring_app.Repositorio.ProductoRepositorio;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.awt.*;
-import java.awt.Font;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.nio.file.Paths;
 import java.util.List;
 import java.util.Optional;
 
